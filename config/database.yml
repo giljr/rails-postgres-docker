@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV.fetch("DATABASE_HOST", "db") %>
+  username: <%= ENV.fetch("DATABASE_USER", "tarefas") %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "tarefas_dev") %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+
+development:
+  <<: *default
+  database: <%= ENV.fetch("DATABASE_NAME", "tarefas_development") %>
+
+test:
+  <<: *default
+  database: tarefas_test
+
+production:
+  <<: *default
+  database: tarefas_production
