@@ -1,25 +1,34 @@
-# README
+# Rails + PostgreSQL + Docker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple and reproducible development environment using:
 
-Things you may want to cover:
+* Ruby on Rails
+* PostgreSQL
+* Docker
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+Clone the repository:
 
-* Configuration
+```bash
+git clone https://github.com/giljr/rails-postgres-docker.git
+cd rails-postgres-docker
+```
 
-* Database creation
+Start the application:
 
-* Database initialization
+```bash
+docker compose up
+```
 
-* How to run the test suite
+Access:
 
-* Services (job queues, cache servers, search engines, etc.)
+```text
+http://localhost:3000
+```
 
-* Deployment instructions
+## Goal
 
-* ...
-# rails-postgres-docker
+This project is part of a simple step-by-step series about building a Rails application with PostgreSQL and Docker.
+
+> Keep it simple. Make it reproducible.
